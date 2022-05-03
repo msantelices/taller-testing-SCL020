@@ -1,0 +1,169 @@
+:root {
+    --main-color: #67bdb4;
+    --text-color: #1c1c1c;
+    --box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather Sans', sans-serif;;
+}
+
+header {
+    background: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    box-shadow: var(--box-shadow);
+}
+
+header a {
+    color: #fff;
+}
+
+header .logo {
+    font-size: 1rem;
+}
+
+header nav a {
+    display: inline-block;
+    margin: 0 1rem;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+main {
+    width: 80%;
+    max-width: 900px;
+    margin: 6rem auto 9rem auto;
+    min-height: calc(100vh - 375px);
+}
+
+main .filters {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    padding-bottom: 0.5rem;
+
+}
+
+main .filters ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+main .filters ul li {
+    margin-right: 1.5rem;
+}
+
+main .filters ul li a {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-color);
+    text-transform: uppercase;
+}
+
+main .filters ul li a.active {
+    color: var(--main-color)
+}
+
+.posts-container .post {
+    display: flex;
+    margin-bottom: 4rem;
+}
+
+.posts-container .post img {
+    width: 100%;
+}
+
+.posts-container .post .thumbnail {
+    width: 30%;
+}
+
+.posts-container .post .post-content {
+    padding-left: 2rem;
+    width: 70%;
+}
+
+.posts-container .post h3 {
+    margin-bottom: 2rem;
+}
+
+.posts-container .post p {
+    line-height: 1.5;
+}
+
+footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.25);
+    width: 80%;
+    margin: auto;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+footer a {
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.contact-page h2 {
+    margin-bottom: 2rem;
+}
+
+.contact-page .mail {
+    margin-top: 3rem;
+}
+
+@media (max-width: 992px) {
+    .posts-container .post {
+        flex-direction: column;
+    }
+
+    .posts-container .post .thumbnail,
+    .posts-container .post .post-content {
+        width: 100%;
+    }
+
+    .posts-container .post .post-content {
+        padding: 0;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 568px) {
+    header {
+        flex-direction: column;
+    }
+
+    header .logo {
+        margin-bottom: 2rem;
+    }
+
+    main .filters ul li a {
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 1rem 0;
+    }
+}
